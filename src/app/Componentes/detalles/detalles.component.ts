@@ -24,6 +24,8 @@ export class DetallesComponent implements OnInit {
   valorprueba:Number
   valorprueba2: Number
 
+  wantLogin:Boolean = true;
+
   ws:any
   valor:any
   valorS:any
@@ -104,6 +106,14 @@ export class DetallesComponent implements OnInit {
     }catch(e){
       console.log(e)
     }
+  }
+
+  showQR(){
+    this.wantLogin = true
+  }
+
+  hideQR(){
+    this.wantLogin = false
   }
 
 }
