@@ -17,7 +17,7 @@ export class AuthLoginService {
 
   login(user:any): Observable<any>{
     const flagsecure = true
-    this.cookie.set('user',JSON.stringify(user),1,'/','localhost',flagsecure,'None')
+    this.cookie.set('user',JSON.stringify(user),1)
     return this.http.post(this.apiURL + 'Login',user);
   }
 
